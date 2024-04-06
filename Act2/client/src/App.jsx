@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-
-function Button({ text, onClick, esClick }) {
-  const className = esClick ? 'btnClick' : 'btnReiniciar';
-  return <button className={className} onClick={onClick}>{text}</button>;
-}
+import Button from './Button';
+import Comptador from './Comptador';
 
 function App() {
   const [numClicks, setNumClicks] = useState(0);
@@ -21,11 +18,11 @@ function App() {
 
   return (
     <div className="App">
-      <p>Comptador: {numClicks}</p>
+      <Comptador count={numClicks} />
       <Button text="Clic" onClick={incrementNum} esClick={true} />
       <Button text="Reiniciar" onClick={resetNum} esClick={false} />
     </div>
   );
 }
 
-export default App;
+export default App;;
