@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-container input {
+    margin-right: 10px;
+  }
+  
+  .tasca {
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .tasca.completada {
+    text-decoration: line-through;
+  }
