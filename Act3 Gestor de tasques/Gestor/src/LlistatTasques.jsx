@@ -24,7 +24,7 @@ function LlistatTasques() {
   }
 
  return (
-  <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+  <div style={{display: 'flex', flexDirection: 'column', alignItems: 'left'}}>
     <h1>Tasques</h1>
     <FormulariTasques funcAfegirTasca={afegirTasca} />
     {tasques.map((tasca, index) => (
