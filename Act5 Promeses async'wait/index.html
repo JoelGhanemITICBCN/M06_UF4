@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page</title>
+    <script src="functions.js"></script>
+</head>
+<body>
+    <button onclick="let num = prompt('Introdueix un número'); esParell(num).then(result => displayResult('El número es parell')).catch(error => displayResult('El número es senar'))">Comprova si el número es parell</button>
+    <button onclick="let numero = prompt('Introdueix un número'); menorA10(numero).then(result => displayResult('El valor está dentro del rango')).catch(error => displayResult('El valor está fuera del rango'))">Comprova si el número está dentro del rango</button>
+    <button onclick="let lletra = prompt('Introdueix una lletra'); esVocal(lletra).then(result => displayResult('La lletra és una vocal')).catch(error => displayResult('La lletra no és una vocal'))">Comprova si la lletra és una vocal</button>
+    <button onclick="let num1 = prompt('Introdueix el primer número'); let num2 = prompt('Introdueix el segon número'); divideix(num1, num2).then(result => displayResult(`El resultat de la divisio es ${result}`)).catch(error => displayResult(error))">Divideix números</button>
+    <div id="result"></div>
+
+    <script>
+        function displayResult(message) {
+            document.getElementById('result').innerText = message;
+        }
+    </script>
+</body>
+</html>
