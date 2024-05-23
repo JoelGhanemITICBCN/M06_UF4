@@ -1,16 +1,21 @@
-/*
 import React from 'react';
-import { FaTrash } from 'react-icons/fa';
+import firebase from 'firebase/compat/app';
 
 function MoviesDelete({ movie, movies, setMovies }) {
-  const handleDelete = () => {
-    setMovies(movies.filter(m => m.id !== movie.id));
+  const deleteMovie = async () => {
+    const db = firebase.firestore();
+
+    await db.collection('Movies').doc(movie.id).delete();
+
+    const newMovies = movies.filter(m => m.id !== movie.id);
+    setMovies(newMovies);
   };
 
   return (
-    <FaTrash onClick={handleDelete} style={{ cursor: 'pointer' }} />
+    <button onClick={deleteMovie}>
+      Eliminar
+    </button>
   );
 }
 
 export default MoviesDelete;
-*/

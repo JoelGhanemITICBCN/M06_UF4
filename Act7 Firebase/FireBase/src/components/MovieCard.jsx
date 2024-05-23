@@ -1,12 +1,14 @@
 import React from 'react';
-import { FaTrash } from 'react-icons/fa';
+import MoviesDelete from './MoviesDelete';
 
-function MovieCard({ title, image, rate, description, duration, onDelete }) {
+function MovieCard({ movie, movies, setMovies }) {
+  const { title, image, rate, description, duration } = movie;
+
   return (
     <div style={{ display: 'flex', marginBottom: '20px' }}>
       <img src={image} alt={title} style={{ width: '200px', height: 'auto', marginRight: '20px' }} />
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-        <h2>{title} <FaTrash onClick={onDelete} style={{ cursor: 'pointer' }} /></h2>
+        <h2>{title} <MoviesDelete movie={movie} movies={movies} setMovies={setMovies} /></h2>
         <p>Nota: {rate}/10 </p>
         <p>Descripció: {description}</p>
         <p>Duració: {duration} minuts</p>

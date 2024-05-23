@@ -32,7 +32,7 @@ function MoviesList() {
   return (
     <div>
       {movies.map(movie => (
-        <MovieCard key={movie.id} {...movie} />
+        <MovieCard key={movie.id} movie={movie} movies={movies} setMovies={setMovies} />
       ))}
     </div>
   );
